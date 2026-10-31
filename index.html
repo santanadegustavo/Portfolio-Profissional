@@ -124,7 +124,7 @@
             <p class="sobre-paragrafo">Sou estudante de Ciência da Computação na UVA e quero me tornar desenvolvedor fullstack. Hoje trabalho com HTML, CSS, JavaScript e React, e estudo TypeScript, Node.js e Next.js.</p>
             <p class="sobre-paragrafo">Também uso Python para automatizar tarefas e processos com IA. Gosto de transformar uma ideia em algo que funciona e que fica bom em qualquer tela.</p>
             <dl class="dados">
-              <div class="dado"><dt>Formação</dt><dd>Ciência da Computação, UVA (2026 a 2029)</dd></div>
+              <div class="dado"><dt>Formação</dt><dd>Ciência da Computação - UVA <br> (2026 a 2029)</dd></div>
               <div class="dado"><dt>Foco</dt><dd>Front-end rumo ao fullstack</dd></div>
             </dl>
           </div>
@@ -163,7 +163,7 @@
           <p>Cada projeto tem o código no GitHub e uma versão publicada para você abrir e testar.</p>
         </div>
 
-        <div class="projetos-lista">
+        <div class="projetos-lista" id="projetos-lista">
 
           <!-- Projeto 1: para trocar o preview por um print, troque a div "mock" por
                <img class="preview-imagem" src="assets/pethub.png" alt="Prévia do Pethub"> -->
@@ -192,7 +192,7 @@
             </div>
           </article>
 
-          <!-- Projeto 2 -->
+          <!-- Projeto 2 (o selo "Em desenvolvimento" aparece enquanto o projeto não está pronto; quando terminar, apague a linha do <span class="selo">) -->
           <article class="projeto">
             <div class="preview">
               <span class="selo">Em desenvolvimento</span>
@@ -235,6 +235,31 @@
             </div>
           </article>
 
+           <article class="projeto vazio">
+            <div class="preview">
+              <div class="preview-conteudo"><div class="maquete-vazia"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plus"/></svg></div></div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="etiquetas"><span class="etiqueta">Em breve</span></div>
+              <h3>Próximo projeto</h3>
+              <p>Espaço reservado para o próximo projeto. Adicione título, resumo e os links do GitHub e do deploy.</p>
+              <div class="projeto-botoes">
+                <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Botões do carrossel: aparecem sozinhos quando há mais projetos do que cabem na tela -->
+        <div class="carrossel-controles" id="carrossel-controles" hidden>
+          <button class="carrossel-botao" id="projetos-anterior" type="button" aria-label="Projetos anteriores">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="carrossel-botao" id="projetos-proximo" type="button" aria-label="Próximos projetos">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -300,7 +325,7 @@
               <a class="botao botao-principal" href="assets/Currículo - Gustavo Lima.pdf" download>
                 <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>Baixar currículo
               </a>
-              <a class="botao" href="mailto:seu@email.com">
+              <a class="botao" href="mailto:santanagustavo902@gmail.com">
                 <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>Enviar e-mail
               </a>
             </div>

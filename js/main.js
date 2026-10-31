@@ -1,7 +1,7 @@
 // =============================================
 // Configurações rápidas (troque aqui)
 // =============================================
-const MEU_EMAIL = "seu@email.com";
+const MEU_EMAIL = "santanagustavo902@gmail.com";
 const FRASES = ["interfaces web", "React e Next.js", "automações com IA"];
 
 // =============================================
@@ -184,3 +184,46 @@ formulario.addEventListener("submit", async function (evento) {
     avisoFormulario.textContent = "Sem conexão. Tente de novo ou use o e-mail.";
   }
 });
+
+// =============================================
+// Carrossel de projetos
+// =============================================
+const listaProjetos = document.getElementById("projetos-lista");
+const controlesProjetos = document.getElementById("carrossel-controles");
+const botaoAnterior = document.getElementById("projetos-anterior");
+const botaoProximo = document.getElementById("projetos-proximo");
+
+function atualizarCarrossel() {
+  const cabemTodos = listaProjetos.scrollWidth <= listaProjetos.clientWidth + 1;
+
+  // sem sobra de projetos, os botões ficam escondidos
+  controlesProjetos.hidden = cabemTodos;
+
+  const noInicio = listaProjetos.scrollLeft <= 1;
+  const noFim =
+    listaProjetos.scrollLeft + listaProjetos.clientWidth >= listaProjetos.scrollWidth - 1;
+  botaoAnterior.disabled = noInicio;
+  botaoProximo.disabled = noFim;
+}
+
+function rolarProjetos(direcao) {
+  const card = listaProjetos.querySelector(".projeto");
+  const espaco = parseFloat(getComputedStyle(listaProjetos).columnGap) || 0;
+
+  // anda a largura de um card por clique
+  listaProjetos.scrollBy({
+    left: direcao * (card.offsetWidth + espaco),
+    behavior: "smooth",
+  });
+}
+
+botaoAnterior.addEventListener("click", function () {
+  rolarProjetos(-1);
+});
+botaoProximo.addEventListener("click", function () {
+  rolarProjetos(1);
+});
+
+listaProjetos.addEventListener("scroll", atualizarCarrossel);
+window.addEventListener("resize", atualizarCarrossel);
+atualizarCarrossel();
