@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://SEU-PROJETO.vercel.app"><strong>Ver o portfólio online »</strong></a>
+  <a href="https://gustavo-santanade-lima.vercel.app/"><strong>Ver o portfólio online »</strong></a>
 </p>
 
 <p align="center">
