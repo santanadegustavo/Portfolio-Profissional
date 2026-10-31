@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gustavo Santana | Desenvolvedor</title>
+  <meta name="description" content="Portfólio de Gustavo Santana, estudante de Ciência da Computação e desenvolvedor em formação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ícones (sprite SVG) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="t-html" viewBox="0 0 24 24"><g fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4z"/><text x="12" y="14.4" text-anchor="middle" style="font-family:var(--font-mono);font-size:8.5px;font-weight:700;fill:currentColor;fill-opacity:1;stroke:none">5</text></g></symbol>
+    <symbol id="t-css" viewBox="0 0 24 24"><g fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4z"/><text x="12" y="14.4" text-anchor="middle" style="font-family:var(--font-mono);font-size:8.5px;font-weight:700;fill:currentColor;fill-opacity:1;stroke:none">3</text></g></symbol>
+    <symbol id="t-js" viewBox="0 0 24 24"><g fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><text x="12" y="15.6" text-anchor="middle" style="font-family:var(--font-mono);font-size:8px;font-weight:700;fill:currentColor;fill-opacity:1;stroke:none">JS</text></g></symbol>
+    <symbol id="t-python" viewBox="0 0 24 24"><g fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M11.5 2.5c-3 0-5 .8-5 2.8V8h5v1H5.2C3.2 9 2.5 10.6 2.5 12.5s.7 3.5 2.7 3.5H7v-2.3c0-1.700 1.400-3 3-3h4c1.400 0 2.500-1.100 2.500-2.500V5.300c0-2-2-2.800-5-2.800z"/><path transform="rotate(180 12 12)" d="M11.5 2.5c-3 0-5 .8-5 2.8V8h5v1H5.2C3.2 9 2.5 10.6 2.5 12.5s.7 3.5 2.7 3.5H7v-2.3c0-1.700 1.400-3 3-3h4c1.400 0 2.500-1.100 2.500-2.500V5.300c0-2-2-2.800-5-2.800z"/><circle cx="8.6" cy="5.2" r=".8" fill="currentColor" fill-opacity="1" stroke="none"/><circle cx="15.4" cy="18.8" r=".8" fill="currentColor" fill-opacity="1" stroke="none"/></g></symbol>
+    <symbol id="t-react" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.9" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="t-tailwind" viewBox="0 0 24 24"><path fill="currentColor" fill-opacity=".9" d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zM6.001 12c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></symbol>
+    <symbol id="t-node" viewBox="0 0 24 24"><g fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z"/><path d="M9.3 15.3V8.7l5.4 6.6V8.7" fill="none"/></g></symbol>
+    <symbol id="t-ai" viewBox="0 0 24 24"><g fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3.5l1.9 5.6 5.600 1.900-5.600 1.900L12 18.500l-1.900-5.600L4.500 11l5.600-1.900z"/><path fill="none" d="M19 3.500v3M17.500 5h3M5.500 17v3M4 18.500h3"/></g></symbol>
+
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.500 10.500L12 15l4.500-4.500M5 19h14"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.500" r="4"/><path d="M4 21c0-4.200 3.600-7 8-7s8 2.800 8 7"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.800"/><path d="M21 16l-5-5-9 9"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.500l1.900 5.600 5.600 1.900-5.600 1.900L12 18.500l-1.900-5.600L4.500 11l5.600-1.900z"/></symbol>
+  </defs>
+</svg>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="menu" id="menu">
+    <div class="container menu-conteudo">
+      <a class="logo" href="#inicio">Portfólio<span class="cursor" aria-hidden="true">_</span></a>
+      <div class="menu-direita">
+        <nav class="navegacao" id="navegacao" aria-label="Principal">
+          <ul class="links-menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#trajetoria">Trajetória</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <button class="hamburguer" id="hamburguer" type="button" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu"><span></span></button>
+      </div>
+    </div>
+    <div class="barra-progresso" id="barra-progresso" aria-hidden="true"></div>
+  </header>
+
+  <main>
+
+    <!-- ========== INÍCIO ========== -->
+    <section class="topo" id="inicio">
+      <div class="topo-fundo" aria-hidden="true">
+        <div class="topo-grade"></div>
+        <div class="mancha mancha-a"></div>
+        <div class="mancha mancha-b"></div>
+        <div class="luz-mouse"></div>
+      </div>
+      <div class="container">
+        <div class="topo-colunas">
+          <div>
+            <span class="disponivel entrada"><i class="ponto"></i>aberto a oportunidades</span>
+            <h1 class="entrada atraso-1">Gustavo Santana</h1>
+            <p class="topo-cargo entrada atraso-2">Desenvolvedor em formação, com foco em <span class="frase" id="frase">interfaces web</span></p>
+            <p class="apresentacao entrada atraso-3">Estudante de Ciência da Computação que cria interfaces, aplicações web e automações com IA. Meu objetivo é atuar como desenvolvedor fullstack.</p>
+            <div class="topo-botoes entrada atraso-4">
+              <a class="botao botao-principal" href="#projetos">Ver projetos</a>
+              <a class="botao" href="#contato">Falar comigo</a>
+            </div>
+          </div>
+          <div class="cartao-codigo entrada atraso-3" aria-hidden="true">
+            <div class="cartao-codigo-topo"><i></i><i></i><i></i><span>gustavo.ts</span></div>
+<pre><span class="cod-var">const</span> gustavo <span class="cod-pontuacao">=</span> <span class="cod-pontuacao">{</span>
+  <span class="cod-chave">curso</span><span class="cod-pontuacao">:</span> <span class="cod-texto">"Ciência da Computação"</span><span class="cod-pontuacao">,</span>
+  <span class="cod-chave">faculdade</span><span class="cod-pontuacao">:</span> <span class="cod-texto">"Universidade Veiga de Almeida"</span><span class="cod-pontuacao">,</span>
+  <span class="cod-chave">foco</span><span class="cod-pontuacao">:</span> <span class="cod-pontuacao">[</span><span class="cod-texto">"front-end"</span><span class="cod-pontuacao">,</span> <span class="cod-texto">"fullstack"</span><span class="cod-pontuacao">],</span>
+  <span class="cod-chave">stack</span><span class="cod-pontuacao">:</span> <span class="cod-pontuacao">[</span><span class="cod-texto">"React"</span><span class="cod-pontuacao">,</span> <span class="cod-texto">"TypeScript"</span><span class="cod-pontuacao">],</span>
+  <span class="cod-chave">status</span><span class="cod-pontuacao">:</span> <span class="cod-texto">"aberto a oportunidades"</span><span class="cod-pontuacao">,</span>
+<span class="cod-pontuacao">};</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOBRE ========== -->
+    <section id="sobre">
+      <div class="container">
+        <div class="sobre-grade">
+
+          <div class="sobre-foto">
+            <div class="foto-moldura">
+              <div class="foto-brilho" aria-hidden="true"></div>
+              <div class="foto-orbita" aria-hidden="true"></div>
+              <div class="foto-anel" aria-hidden="true"></div>
+              <div class="foto">
+                <span class="foto-vazia" aria-hidden="true">
+                  <svg class="icone" viewBox="0 0 24 24"><use href="#i-user"/></svg>
+                </span>
+                <img src="assets/foto.jpg" alt="Foto de Gustavo Santana" onerror="this.remove()">
+              </div>
+            </div>
+          </div>
+
+          <div class="sobre-texto">
+            <div class="secao-cabecalho">
+              <span class="sobretitulo">Sobre mim</span>
+              <h2>Aprendendo a construir a web de ponta a ponta</h2>
+            </div>
+            <!-- Escreva aqui o seu "sobre mim" -->
+            <p class="sobre-paragrafo">Sou estudante de Ciência da Computação na UVA e quero me tornar desenvolvedor fullstack. Hoje trabalho com HTML, CSS, JavaScript e React, e estudo TypeScript, Node.js e Next.js.</p>
+            <p class="sobre-paragrafo">Também uso Python para automatizar tarefas e processos com IA. Gosto de transformar uma ideia em algo que funciona e que fica bom em qualquer tela.</p>
+            <dl class="dados">
+              <div class="dado"><dt>Formação</dt><dd>Ciência da Computação, UVA (2026 a 2029)</dd></div>
+              <div class="dado"><dt>Foco</dt><dd>Front-end rumo ao fullstack</dd></div>
+            </dl>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Skills</span>
+          <h2>Tecnologias que eu uso e estudo</h2>
+          <p>Do básico da web ao back-end e à IA, em diferentes níveis de prática.</p>
+        </div>
+        <ul class="skills-lista">
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-html"/></svg></span><h3>HTML</h3><p>Estrutura semântica e acessível.</p><span class="nivel">Base sólida</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-css"/></svg></span><h3>CSS</h3><p>Layouts responsivos com Flexbox e Grid.</p><span class="nivel">Base sólida</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-js"/></svg></span><h3>JavaScript</h3><p>Lógica e interação no navegador.</p><span class="nivel">Base sólida</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-python"/></svg></span><h3>Python</h3><p>Scripts para automação de tarefas.</p><span class="nivel">Começando</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-react"/></svg></span><h3>React</h3><p>Componentes, estado e interfaces reativas.</p><span class="nivel">Em prática</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-tailwind"/></svg></span><h3>Tailwind</h3><p>Estilização rápida com classes utilitárias.</p><span class="nivel">Em prática</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-node"/></svg></span><h3>Node.js</h3><p>JavaScript no servidor.</p><span class="nivel">Estudando</span></li>
+          <li class="skill"><span class="skill-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#t-ai"/></svg></span><h3>IA</h3><p>Automação e processos com inteligência artificial.</p><span class="nivel">Aplicando</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== PROJETOS ========== -->
+    <section id="projetos">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Projetos</span>
+          <h2>O que eu já construí</h2>
+          <p>Cada projeto tem o código no GitHub e uma versão publicada para você abrir e testar.</p>
+        </div>
+
+        <div class="projetos-lista">
+
+          <!-- Projeto 1: para trocar o preview por um print, troque a div "mock" por
+               <img class="preview-imagem" src="assets/pethub.png" alt="Prévia do Pethub"> -->
+          <article class="projeto">
+            <div class="preview">
+              <div class="preview-conteudo">
+                <div class="maquete">
+                  <div class="maquete-barra"><i></i><i></i><i></i><span>pethub-gustavo.vercel.app</span></div>
+                  <div class="maquete-corpo">
+                    <div class="maquete-menu"></div>
+                    <div class="maquete-destaque"><b></b><s></s></div>
+                    <div class="maquete-grade"><div></div><div></div><div></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="etiquetas"><span class="etiqueta">Next.js</span><span class="etiqueta">TypeScript</span><span class="etiqueta">Tailwind</span></div>
+              <h3>Pethub</h3>
+              <p>Loja virtual para petshop feita com Next.js, TypeScript e Tailwind, com layout responsivo para desktop e celular.</p>
+              <div class="projeto-botoes">
+                <a class="botao botao-pequeno botao-principal" href="https://pethub-gustavo.vercel.app" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <!-- Troque o # pelo link do repositório -->
+                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="projeto">
+            <div class="preview">
+              <span class="selo">Em desenvolvimento</span>
+              <div class="preview-conteudo">
+                <div class="maquete">
+                  <div class="maquete-barra"><i></i><i></i><i></i><span>terminal</span></div>
+                  <div class="terminal">
+                    <div><span class="terminal-simbolo">$</span> python organizar_imagens.py</div>
+                    <div>› lendo produtos do Shopify…</div>
+                    <div>› agrupando imagens por produto…</div>
+                    <div><span class="terminal-simbolo">✓</span> pasta organizada</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="etiquetas"><span class="etiqueta">Python</span><span class="etiqueta">IA</span><span class="etiqueta">Shopify</span></div>
+              <h3>Organizador de imagens com IA</h3>
+              <p>Automação em Python com IA que organiza as imagens de produtos de uma pasta usando os dados da loja no Shopify.</p>
+              <div class="projeto-botoes">
+                <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3: copie um bloco <article> inteiro para adicionar mais projetos -->
+          <article class="projeto vazio">
+            <div class="preview">
+              <div class="preview-conteudo"><div class="maquete-vazia"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plus"/></svg></div></div>
+            </div>
+            <div class="projeto-corpo">
+              <div class="etiquetas"><span class="etiqueta">Em breve</span></div>
+              <h3>Próximo projeto</h3>
+              <p>Espaço reservado para o próximo projeto. Adicione título, resumo e os links do GitHub e do deploy.</p>
+              <div class="projeto-botoes">
+                <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRAJETÓRIA ========== -->
+    <section id="trajetoria">
+      <div class="container">
+        <div class="linha-tempo-colunas">
+          <div class="secao-cabecalho">
+            <span class="sobretitulo">Trajetória</span>
+            <h2>Cursos e marcos até aqui</h2>
+            <p>Da graduação aos primeiros projetos publicados.</p>
+          </div>
+
+          <!-- Cada <li> é um item. Copie e cole para adicionar. -->
+          <ol class="linha-tempo" id="linha-tempo">
+            <li class="linha-tempo-item">
+              <span class="linha-tempo-ponto" aria-hidden="true"></span>
+              <span class="linha-tempo-data">Fev 2026</span>
+              <h3>Início em Ciência da Computação <span class="linha-tempo-local">· UVA</span></h3>
+              <p>Ingresso na graduação, com conclusão prevista para dezembro de 2029.</p>
+            </li>
+            <li class="linha-tempo-item">
+              <span class="linha-tempo-ponto" aria-hidden="true"></span>
+              <span class="linha-tempo-data">2026</span>
+              <h3>Base em front-end</h3>
+              <p>HTML, CSS, JavaScript e os primeiros componentes em React.</p>
+            </li>
+            <li class="linha-tempo-item">
+              <span class="linha-tempo-ponto" aria-hidden="true"></span>
+              <span class="linha-tempo-data">2026</span>
+              <h3>Pethub no ar</h3>
+              <p>Primeiro projeto de portfólio com Next.js, TypeScript e Tailwind, publicado na Vercel.</p>
+            </li>
+            <li class="linha-tempo-item">
+              <span class="linha-tempo-ponto" aria-hidden="true"></span>
+              <span class="linha-tempo-data">Agora</span>
+              <h3>TypeScript, Node.js e Python</h3>
+              <p>Estudando back-end com Node.js e usando Python em automações com IA.</p>
+            </li>
+            <li class="linha-tempo-item futuro">
+              <span class="linha-tempo-ponto" aria-hidden="true"></span>
+              <span class="linha-tempo-data">Dez 2029</span>
+              <h3>Formatura prevista</h3>
+              <p>Conclusão da graduação e consolidação do perfil fullstack.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section id="contato">
+      <div class="container">
+        <div class="contato-grade">
+          <div>
+            <div class="secao-cabecalho">
+              <span class="sobretitulo">Contato</span>
+              <h2>Vamos conversar</h2>
+              <p>Deixe uma mensagem, mande um e-mail ou baixe meu currículo.</p>
+            </div>
+            <div class="contato-botoes">
+              <a class="botao botao-principal" href="assets/Currículo - Gustavo Lima.pdf" download>
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>Baixar currículo
+              </a>
+              <a class="botao" href="mailto:seu@email.com">
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>Enviar e-mail
+              </a>
+            </div>
+            <div class="contato-lista">
+              <div class="contato-linha">
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+                <span class="email-texto" id="email-texto">santanagustavo902@gmail.com</span>
+                <button class="botao-icone" id="botao-copiar-email" type="button" aria-label="Copiar e-mail">
+                  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px"><use href="#i-copy"/></svg>
+                </button>
+              </div>
+              <div class="contato-linha">
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+                <a href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <div class="contato-linha">
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                <a href="" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao-formulario">
+            <h3>Enviar mensagem</h3>
+            <!-- Troque SEU_ID pelo código do seu formulário no Formspree (veja o README) -->
+            <form id="formulario" action="https://formspree.io/f/mgaalrav" method="POST">
+              <div class="campo"><label for="f-name">Seu nome</label><input id="f-name" name="nome" type="text" autocomplete="name" required></div>
+              <div class="campo"><label for="f-email">Seu e-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="campo"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" required></textarea></div>
+              <button class="botao botao-principal" type="submit"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg>Enviar mensagem</button>
+              <p class="texto-aviso" id="aviso-formulario" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <span>© 2026 Gustavo Santana</span>
+      <a href="#inicio" class="voltar-topo">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
