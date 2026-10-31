@@ -1,12 +1,7 @@
-// =============================================
-// Configurações rápidas (troque aqui)
-// =============================================
 const MEU_EMAIL = "santanagustavo902@gmail.com";
-const FRASES = ["interfaces web", "React e Next.js", "automações com IA"];
+const FRASES = ["Desenvolvimento Web", "React e Next.js", "automações com IA"];
 
-// =============================================
 // Pegando os elementos da página
-// =============================================
 const menu = document.getElementById("menu");
 const botaoHamburguer = document.getElementById("hamburguer");
 const barraProgresso = document.getElementById("barra-progresso");
@@ -21,9 +16,7 @@ const botaoCopiarEmail = document.getElementById("botao-copiar-email");
 const formulario = document.getElementById("formulario");
 const avisoFormulario = document.getElementById("aviso-formulario");
 
-// =============================================
 // Menu do celular (hambúrguer)
-// =============================================
 function abrirMenu(abrir) {
   menu.classList.toggle("aberto", abrir);
   botaoHamburguer.setAttribute("aria-expanded", abrir);
@@ -49,9 +42,7 @@ document.addEventListener("keydown", function (evento) {
   }
 });
 
-// =============================================
 // Efeitos ao rolar a página
-// =============================================
 function aoRolar() {
   const rolado = window.scrollY;
   const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
@@ -79,9 +70,7 @@ window.addEventListener("scroll", aoRolar);
 window.addEventListener("resize", aoRolar);
 aoRolar();
 
-// =============================================
 // Destaca no menu a seção que está na tela
-// =============================================
 const observador = new IntersectionObserver(
   function (lista) {
     lista.forEach(function (item) {
@@ -100,18 +89,14 @@ secoes.forEach(function (secao) {
   observador.observe(secao);
 });
 
-// =============================================
 // Início: luz que segue o mouse
-// =============================================
 topo.addEventListener("pointermove", function (evento) {
   const caixa = topo.getBoundingClientRect();
   topo.style.setProperty("--mouse-x", evento.clientX - caixa.left + "px");
   topo.style.setProperty("--mouse-y", evento.clientY - caixa.top + "px");
 });
 
-// =============================================
 // Início: frase que troca sozinha
-// =============================================
 let posicaoFrase = 0;
 
 setInterval(function () {
@@ -126,9 +111,7 @@ setInterval(function () {
   }, 260);
 }, 2800);
 
-// =============================================
 // Aviso rápido (aparece e some)
-// =============================================
 let tempoAviso;
 
 function mostrarAviso(texto) {
@@ -141,9 +124,7 @@ function mostrarAviso(texto) {
   }, 2600);
 }
 
-// =============================================
 // Botão de copiar e-mail
-// =============================================
 botaoCopiarEmail.addEventListener("click", async function () {
   try {
     await navigator.clipboard.writeText(MEU_EMAIL);
@@ -153,9 +134,7 @@ botaoCopiarEmail.addEventListener("click", async function () {
   }
 });
 
-// =============================================
 // Formulário de contato (usa o Formspree)
-// =============================================
 formulario.addEventListener("submit", async function (evento) {
   evento.preventDefault();
 
@@ -185,9 +164,7 @@ formulario.addEventListener("submit", async function (evento) {
   }
 });
 
-// =============================================
 // Carrossel de projetos
-// =============================================
 const listaProjetos = document.getElementById("projetos-lista");
 const controlesProjetos = document.getElementById("carrossel-controles");
 const botaoAnterior = document.getElementById("projetos-anterior");
