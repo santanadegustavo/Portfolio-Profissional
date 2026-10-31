@@ -124,7 +124,7 @@
             <p class="sobre-paragrafo">Sou estudante de Ciência da Computação na UVA e quero me tornar desenvolvedor fullstack. Hoje trabalho com HTML, CSS, JavaScript e React, e estudo TypeScript, Node.js e Next.js.</p>
             <p class="sobre-paragrafo">Também uso Python para automatizar tarefas e processos com IA. Gosto de transformar uma ideia em algo que funciona e que fica bom em qualquer tela.</p>
             <dl class="dados">
-              <div class="dado"><dt>Formação</dt><dd>Ciência da Computação - UVA <br> (2026 a 2029)</dd></div>
+              <div class="dado"><dt>Formação</dt><dd>Ciência da Computação, UVA (2026 a 2029)</dd></div>
               <div class="dado"><dt>Foco</dt><dd>Front-end rumo ao fullstack</dd></div>
             </dl>
           </div>
@@ -165,20 +165,25 @@
 
         <div class="projetos-lista" id="projetos-lista">
 
-          <!-- Projeto 1: para trocar o preview por um print, troque a div "mock" por
-               <img class="preview-imagem" src="assets/pethub.png" alt="Prévia do Pethub"> -->
+          <!-- Projeto 1 (o preview é a imagem em assets/. Para trocar, substitua o arquivo ou mude o src) -->
           <article class="projeto">
             <div class="preview">
-              <div class="preview-conteudo">
-                <div class="maquete">
-                  <div class="maquete-barra"><i></i><i></i><i></i><span>pethub-gustavo.vercel.app</span></div>
-                  <div class="maquete-corpo">
-                    <div class="maquete-menu"></div>
-                    <div class="maquete-destaque"><b></b><s></s></div>
-                    <div class="maquete-grade"><div></div><div></div><div></div></div>
-                  </div>
-                </div>
+              <img class="preview-imagem" src="assets/preview-portfolio.jpg" alt="Prévia do portfólio" loading="lazy">
+            </div>
+            <div class="projeto-corpo">
+              <div class="etiquetas"><span class="etiqueta">HTML</span><span class="etiqueta">CSS</span><span class="etiqueta">JavaScript</span></div>
+              <h3>Portfólio</h3>
+              <p>Este portfólio, feito do zero e responsivo, com menu hambúrguer no celular, linha do tempo e carrossel de projetos.</p>
+              <div class="projeto-botoes">
+                <a class="botao botao-pequeno botao-principal" href="gustavo-santanade-lima.vercel.app" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
+            </div>
+          </article>
+
+          <article class="projeto">
+            <div class="preview">
+              <img class="preview-imagem" src="assets/preview-pethub.jpg" alt="Prévia do projeto Pethub" loading="lazy">
             </div>
             <div class="projeto-corpo">
               <div class="etiquetas"><span class="etiqueta">Next.js</span><span class="etiqueta">TypeScript</span><span class="etiqueta">Tailwind</span></div>
@@ -187,7 +192,7 @@
               <div class="projeto-botoes">
                 <a class="botao botao-pequeno botao-principal" href="https://pethub-gustavo.vercel.app" target="_blank" rel="noopener noreferrer">Ver site</a>
                 <!-- Troque o # pelo link do repositório -->
-                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="botao botao-pequeno" href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
@@ -213,43 +218,56 @@
               <h3>Organizador de imagens com IA</h3>
               <p>Automação em Python com IA que organiza as imagens de produtos de uma pasta usando os dados da loja no Shopify.</p>
               <div class="projeto-botoes">
-                <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a>
-                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <!-- <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a> -->
+                <a class="botao botao-pequeno" href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
-          <!-- Projeto 3: copie um bloco <article> inteiro para adicionar mais projetos -->
-          <article class="projeto vazio">
+          <article class="projeto">
             <div class="preview">
-              <div class="preview-conteudo"><div class="maquete-vazia"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plus"/></svg></div></div>
+              <img class="preview-imagem" src="assets/preview-lista-tarefas.jpg" alt="Prévia da Lista de Tarefas" loading="lazy">
             </div>
             <div class="projeto-corpo">
-              <div class="etiquetas"><span class="etiqueta">Em breve</span></div>
-              <h3>Próximo projeto</h3>
-              <p>Espaço reservado para o próximo projeto. Adicione título, resumo e os links do GitHub e do deploy.</p>
+              <div class="etiquetas"><span class="etiqueta">HTML</span><span class="etiqueta">CSS</span><span class="etiqueta">JavaScript</span></div>
+              <h3>Lista de Tarefas</h3>
+              <p>Aplicação para adicionar tarefas e limpar a lista com um clique.</p>
               <div class="projeto-botoes">
-                <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a>
-                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="botao botao-pequeno botao-principal" href="https://santanadegustavo.github.io/Lista-de-Tarefas/" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
-           <article class="projeto vazio">
+          <article class="projeto">
             <div class="preview">
-              <div class="preview-conteudo"><div class="maquete-vazia"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plus"/></svg></div></div>
+              <img class="preview-imagem" src="assets/preview-clima.jpg" alt="Prévia da Previsão do Tempo" loading="lazy">
             </div>
             <div class="projeto-corpo">
-              <div class="etiquetas"><span class="etiqueta">Em breve</span></div>
-              <h3>Próximo projeto</h3>
-              <p>Espaço reservado para o próximo projeto. Adicione título, resumo e os links do GitHub e do deploy.</p>
+              <div class="etiquetas"><span class="etiqueta">HTML</span><span class="etiqueta">CSS</span><span class="etiqueta">JavaScript</span><span class="etiqueta">API</span></div>
+              <h3>Previsão do Tempo</h3>
+              <p>Busca uma cidade e mostra a temperatura, a condição do tempo e a umidade.</p>
               <div class="projeto-botoes">
-                <a class="botao botao-pequeno botao-principal" href="#" target="_blank" rel="noopener noreferrer">Ver site</a>
-                <a class="botao botao-pequeno" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="botao botao-pequeno botao-principal" href="previsao-tempo-gustavo.vercel.app" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
+          <article class="projeto">
+            <div class="preview">
+              <img class="preview-imagem" src="assets/preview-gusta-store.jpg" alt="Prévia da Gusta Store" loading="lazy">
+            </div>
+            <div class="projeto-corpo">
+              <div class="etiquetas"><span class="etiqueta">HTML</span><span class="etiqueta">CSS</span><span class="etiqueta">JavaScript</span></div>
+              <h3>Gusta Store</h3>
+              <p>Página de loja de tecnologia com produto em destaque, navegação por slides e visual escuro com detalhes em ciano.</p>
+              <div class="projeto-botoes">
+                <a class="botao botao-pequeno botao-principal" href="https://santanadegustavo.github.io/Gusta-Store/" target="_blank" rel="noopener noreferrer">Ver site</a>
+                <a class="botao botao-pequeno" href="https://github.com/santanadegustavo" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
         </div>
 
         <!-- Botões do carrossel: aparecem sozinhos quando há mais projetos do que cabem na tela -->
@@ -264,7 +282,7 @@
       </div>
     </section>
 
-    <!-- ========== TRAJETÓRIA ========== -->
+    <!--  TRAJETÓRIA -->
     <section id="trajetoria">
       <div class="container">
         <div class="linha-tempo-colunas">
@@ -274,7 +292,6 @@
             <p>Da graduação aos primeiros projetos publicados.</p>
           </div>
 
-          <!-- Cada <li> é um item. Copie e cole para adicionar. -->
           <ol class="linha-tempo" id="linha-tempo">
             <li class="linha-tempo-item">
               <span class="linha-tempo-ponto" aria-hidden="true"></span>
@@ -311,7 +328,7 @@
       </div>
     </section>
 
-    <!-- ========== CONTATO ========== -->
+    <!-- CONTATO -->
     <section id="contato">
       <div class="container">
         <div class="contato-grade">
@@ -350,7 +367,6 @@
 
           <div class="cartao-formulario">
             <h3>Enviar mensagem</h3>
-            <!-- Troque SEU_ID pelo código do seu formulário no Formspree (veja o README) -->
             <form id="formulario" action="https://formspree.io/f/mgaalrav" method="POST">
               <div class="campo"><label for="f-name">Seu nome</label><input id="f-name" name="nome" type="text" autocomplete="name" required></div>
               <div class="campo"><label for="f-email">Seu e-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
