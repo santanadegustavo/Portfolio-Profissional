@@ -256,6 +256,15 @@ dl.facts{margin-block:30px 0}
 .maquete-grade div::after{content:"";position:absolute;left:8px;bottom:8px;width:50%;height:5px;border-radius:3px;background:var(--borda-forte)}
 .terminal{font:400 .68rem/1.7 var(--fonte-codigo);color:var(--texto-suave);padding:12px;white-space:nowrap;overflow:hidden}
 .terminal .terminal-simbolo{color:var(--destaque)}
+/* maquete do Norte (painel financeiro) */
+.financas{flex:1;min-height:0;padding:10px 12px;display:flex;flex-direction:column;gap:8px;font-family:var(--fonte-codigo)}
+.financas small{display:block;font-size:.55rem;color:var(--texto-suave);letter-spacing:.04em}
+.financas-saldo strong{font:600 1rem var(--fonte-titulo);color:var(--texto)}
+.financas-linha{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.financas-linha div{padding:6px 8px;border:1px solid var(--borda);border-radius:7px;background:var(--cartao-2)}
+.financas-linha span{font-size:.68rem}
+.positivo{color:var(--destaque)}
+.negativo{color:#c9a3a3}
 .maquete-vazia{height:100%;border:1.5px dashed var(--borda-forte);border-radius:10px;display:grid;place-items:center;color:var(--borda-forte)}
 .maquete-vazia .icone{width:34px;height:34px}
 .projeto-corpo{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1;min-width:0}
@@ -428,6 +437,10 @@ dl.facts{margin-block:30px 0}
 
 @media (max-width:600px){
   .so-celular{display:inline-flex}
-  .projeto{flex-basis:86%} /* 1 card, com um pedaço do próximo aparecendo */
+  .projeto{flex-basis:86%}
+  .financas{padding:6px 10px;gap:5px} /* maquete do Norte menor no celular */
+  .financas-saldo small{display:none}
+  .financas-saldo strong{font-size:.85rem}
+  .financas-linha div{padding:4px 8px} /* 1 card, com um pedaço do próximo aparecendo */
   .carrossel-controles{justify-content:center}
 }
