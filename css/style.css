@@ -209,7 +209,12 @@ dl.facts{margin-block:30px 0}
 .skill-icone svg{width:32px;height:32px}
 .skill h3{font-size:1.2rem;font-weight:600}
 .skill p{font-size:.9rem;color:var(--texto-suave);line-height:1.5}
-.nivel{margin-top:auto;font:400 .72rem var(--fonte-codigo);letter-spacing:.06em;color:var(--destaque)}
+/* nível: barra de 3 partes + nome do nível */
+.nivel-linha{margin-top:auto;display:flex;align-items:center;gap:12px}
+.barra-nivel{display:flex;gap:4px;flex:1}
+.barra-nivel i{height:5px;flex:1;border-radius:3px;background:var(--borda-forte)}
+.barra-nivel i.cheio{background:var(--destaque)}
+.nivel{font:400 .72rem var(--fonte-codigo);letter-spacing:.06em;color:var(--destaque);white-space:nowrap}
 
 /* Projetos */
 .projetos-lista{
@@ -392,6 +397,8 @@ dl.facts{margin-block:30px 0}
   .topo{padding-block:calc(var(--altura-menu) + 40px) 64px}
   .skills-lista{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .skill{padding:16px}
+  .nivel-linha{flex-direction:column;align-items:stretch;gap:8px} /* barra em cima, nível embaixo */
+  .barra-nivel{flex:none}
   .skill-icone{width:48px;height:48px}
   .skill-icone svg{width:28px;height:28px}
   .cartao-formulario{padding:20px}
